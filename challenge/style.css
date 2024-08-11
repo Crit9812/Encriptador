@@ -1,0 +1,120 @@
+*{
+    padding:0;
+    margin:0
+}
+
+.body{
+    box-sizing: border-box;
+    background-image: url('fondo.jpg');/*poner una imagen de fondo*/
+    background-size: cover; /* Acopla la imagen al tamaño del fondo y no al reves*/
+    background-repeat: no-repeat; /* Evita que la imagen se repita para abarcar el tamaño de la pagina*/
+    }
+
+
+.partePrincipal{
+    color: #ffffff;
+    padding: 1% 15% 5%;/*Se le da un espacio interno a los elementos*/
+    display: flex;/*divide de forma horizontal los elementos*/
+    align-items: center; /*Alinea a todos los elementos en el centro*/
+    flex-direction: column;/*Alinea los elementos por columnas*/
+    gap: 30px;/*Separa los elementos*/
+}
+
+.titulo{
+    border-radius: 10px; /*Redondear las esquinas*/
+    padding: .5%;
+    width: 40%; /*Se determina el ancho del elemento*/
+    background-color: white;
+    text-align: center;
+    font-size: 50px; /* Le damos un tamaño a la fuente*/
+    color: black;
+}
+
+.espacioPrincipal{
+    padding: 5%;
+    display: flex;
+    background-color: #edeef35e;
+    border-radius:20px;
+    width: 110%;
+    height: 650px;
+    justify-content: space-between;/*Hacemos que los elementos ocupen todo el espacio del elemento padre*/
+}
+
+
+.contenedor1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulos{
+    font-size: 1.5rem;
+}
+
+.contenedorTexto{
+    border-radius:20px;
+    background-color: #ffffff;
+    width: 600px;
+    height: 580px;/*Definimos el largo del elemento*/
+    color: black;
+}
+
+.contenedorResultado{
+    border-radius:20px;
+    background-color: #ffffff;
+    width: 400px;
+    height: 780px;
+    color: white;
+}
+
+.nota{
+    width: 600px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 25px;
+    color: black;
+}
+
+.botones{
+    display: flex;
+    gap: 50px;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boton1{
+    border-radius: 10px;
+    border-color: #ffffff;
+    background-color: black;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+}
+
+.boton2{
+    border-radius: 10px;
+    border-color: #000000;
+    width: 200px;
+    height: 50px;
+}
+
+.encabezado{
+    padding: 2%;
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
