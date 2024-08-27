@@ -12,17 +12,21 @@
         <Section class="espacioPrincipal">
             <div class="contenedor1">
                 <p class="titulos"><b>INGRESA EL TEXTO AQUI</b></p>
-                <input class="contenedorTexto" type="text">
+                <textarea class="contenedorTexto" ></textarea>
                 <p class="nota"><img src="signoAdmi.png" alt="">Solo letras minúsculas y sin acentos</p>
                 <div class="botones">
-                    <button class="boton1">Encriptar</button>
-                    <button class="boton2">Desencriptar</button>
+                    <button onclick= "Encriptar();" class="boton1">Encriptar</button>
+                    <button  onclick= "Desencriptar();" class="boton2">Desencriptar</button>
                 </div>
                 
             </div>
             <div class="contenedor2">
-                <p  class="titulos"><b>RESULTADO</b></p>
-                <input class="contenedorResultado" type="text">
+                <p class="titulos"><b>RESULTADO</b></p>
+                <textarea id="resultado"  class="contenedorResultado"> </textarea>
+                <button id="copiarTex" class="boton1" onclick="copiar()">Copiar</button>
+                <img id="imagen" src="Muñeco.png" alt="Imagen">
+                <p id="mensajeAdv" class="titulos"><b>Ningun mensaje fue encontrado</b></p>
+                <p id="mensajeAdv2">Ingresa el texto que deseas encriptar o desencriptar</p>
             </div>
         </Section>
         
@@ -32,5 +36,6 @@
     <footer class="encabezado">
         <p>Desarrollado por Christopher</p>
     </footer>
+    <script src="app.js" ></script>
 </body>
 </html>

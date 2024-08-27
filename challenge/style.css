@@ -1,120 +1,225 @@
-*{
-    padding:0;
-    margin:0
+* {
+    padding: 0;
+    margin: 0;
 }
 
-.body{
+.body {
     box-sizing: border-box;
-    background-image: url('fondo.jpg');/*poner una imagen de fondo*/
-    background-size: cover; /* Acopla la imagen al tamaño del fondo y no al reves*/
-    background-repeat: no-repeat; /* Evita que la imagen se repita para abarcar el tamaño de la pagina*/
-    }
-
-
-.partePrincipal{
-    color: #ffffff;
-    padding: 1% 15% 5%;/*Se le da un espacio interno a los elementos*/
-    display: flex;/*divide de forma horizontal los elementos*/
-    align-items: center; /*Alinea a todos los elementos en el centro*/
-    flex-direction: column;/*Alinea los elementos por columnas*/
-    gap: 30px;/*Separa los elementos*/
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.titulo{
-    border-radius: 10px; /*Redondear las esquinas*/
-    padding: .5%;
-    width: 40%; /*Se determina el ancho del elemento*/
+.partePrincipal {
+    color: #ffffff;
+    padding: 1% 15% 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.titulo {
+    border-radius: 1%;
+    padding: 0.5%;
+    width: 40%;
     background-color: white;
     text-align: center;
-    font-size: 50px; /* Le damos un tamaño a la fuente*/
+    font-size: 3rem;
     color: black;
 }
 
-.espacioPrincipal{
+.espacioPrincipal {
     padding: 5%;
     display: flex;
     background-color: #edeef35e;
-    border-radius:20px;
-    width: 110%;
-    height: 650px;
-    justify-content: space-between;/*Hacemos que los elementos ocupen todo el espacio del elemento padre*/
+    border-radius: 2%;
+    width: 100%;
+    max-width: 1200px;
+    height: 65vh;
+    justify-content: center;
+    gap: 15%;
 }
 
-
-.contenedor1{
+.contenedor1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 2%;
 }
 
-.contenedor2{
+.contenedor2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 2%;
 }
 
-.titulos{
+.titulos {
     font-size: 1.5rem;
 }
 
-.contenedorTexto{
-    border-radius:20px;
+.contenedorTexto {
+    border-radius: 2%;
     background-color: #ffffff;
-    width: 600px;
-    height: 580px;/*Definimos el largo del elemento*/
+    width: 100%;
+    height: 100%;
     color: black;
+    font-size: 1rem;
+    padding: 2%;
+    box-sizing: border-box;
+    resize: none;
+    overflow: auto;
+    vertical-align: top;
 }
 
-.contenedorResultado{
-    border-radius:20px;
+.contenedorResultado {
+    border-radius: 2%;
     background-color: #ffffff;
-    width: 400px;
-    height: 780px;
-    color: white;
+    width: 180%;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    padding: 2%;
+    box-sizing: border-box;
+    resize: none;
+    overflow: auto;
+    vertical-align: top;
 }
 
-.nota{
-    width: 600px;
-    border-radius: 5px;
+.nota {
+    width: 100%;
+    border-radius: 1%;
     text-align: center;
     background-color: #ffffff;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: black;
 }
 
-.botones{
+.botones {
     display: flex;
-    gap: 50px;
-    width: 600px;
+    gap: 5%;
+    width: 60%;
     align-items: center;
     justify-content: center;
-
 }
 
-.boton1{
-    border-radius: 10px;
+.boton1 {
+    border-radius: 1%;
     border-color: #ffffff;
     background-color: black;
     color: #ffffff;
-    width: 200px;
-    height: 50px;
+    width: 50%;
+    height: 5vh;
 }
 
-.boton2{
-    border-radius: 10px;
+.boton2 {
+    border-radius: 1%;
     border-color: #000000;
-    width: 200px;
-    height: 50px;
+    width: 50%;
+    height: 5vh;
 }
 
-.encabezado{
+.encabezado {
     padding: 2%;
     background-color: black;
     color: #ffffff;
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 3vw;
 }
 
+#resultado {
+    display: none;
+}
+
+#imagen {
+    width: 200%;
+    display: block;
+}
+
+#copiarTex {
+    display: none;
+}
+
+@media (max-width:1024px){
+    #imagen {
+        width: 50%;
+        display: none;
+    }
+    .espacioPrincipal{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .contenedor1 {
+        gap: 5px;
+    }
+    .contenedorTexto {
+        width: 100%;
+        height: 500px;
+        
+    }
+    .contenedorResultado {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:412px){
+    #imagen {
+        width: 50%;
+        display: none;
+    }
+    .espacioPrincipal{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .contenedor1 {
+        gap: 5px;
+    }
+    .contenedorTexto {
+        width: 100%;
+        height: 300px;
+        
+    }
+    .contenedorResultado {
+        width: 100%;
+        height: 100%;
+    }
+    .titulos {
+        font-size: 1rem;
+    }
+    
+    .titulo {
+        border-radius: 1%;
+        padding: 0.5%;
+        width: 60%;
+        background-color: white;
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+    }
+    .nota {
+        width: 100%;
+        border-radius: 1%;
+        text-align: center;
+        background-color: #ffffff;
+        font-size: 1rem;
+        color: black;
+    }
+    .boton1 {
+        border-radius: 1%;
+        border-color: #ffffff;
+        background-color: black;
+        color: #ffffff;
+        width: 50%;
+        height: 3vh;
+    }
+    
+    .boton2 {
+        border-radius: 1%;
+        border-color: #000000;
+        width: 50%;
+        height: 3vh;
+    }
+}
